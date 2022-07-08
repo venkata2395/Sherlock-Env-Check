@@ -1,13 +1,8 @@
 name: 'tag'
 on:
   pull_request:
-    branches: 
-      - master
-      - main  
-  push:
-    branches: 
-      - master
-      - main
+    types: closed
+
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
