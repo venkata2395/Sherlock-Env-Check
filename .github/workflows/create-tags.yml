@@ -4,8 +4,7 @@ on:
   push:
     branches: 
       - master
-    types:
-      - closed
+      - main
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
