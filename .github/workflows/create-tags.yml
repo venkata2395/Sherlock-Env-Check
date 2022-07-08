@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Checkout Code
-       uses: actions/checkout@v5.1.0
+       uses: actions/checkout@v2.4.2
      - name: Set Tag Output
        id: set-tag
        run:  echo "::set-output name=tag_name::$(sh version.sh)"
      - name: Create Tag
-       uses: actions/github-script@v3
+       uses: actions/github-script@v6.1.0
        env:
           TAG: ${{ steps.set-tag.outputs.tag_name }}
        with:
