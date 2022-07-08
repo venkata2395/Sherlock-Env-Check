@@ -1,6 +1,9 @@
 name: 'tag'
 on:
   pull_request:
+  push:
+    branches: 
+      - master
     types:
       - closed
 jobs:
