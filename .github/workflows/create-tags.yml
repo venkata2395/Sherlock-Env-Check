@@ -14,7 +14,7 @@ jobs:
        id: set-tag
        run:  echo "::set-output name=tag_name::$(sh version.sh)"
      - name: Create Tag
-       uses: actions/github-script@v3
+       uses: actions/github-script@v6.1.0
        env:
           TAG: ${{ steps.set-tag.outputs.tag_name }}
        with:
