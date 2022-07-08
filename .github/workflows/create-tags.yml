@@ -12,7 +12,7 @@ jobs:
        uses: actions/checkout@v2.4.2
      - name: Set Tag Output
        id: set-tag
-       run:  echo "::set-output name=tag_name::$(sh versions.sh)"
+       run:  echo "::set-output name=tag_name::$(cat version.properties | cut -d'=' -f2)"
      - name: Create Tag
        uses: actions/github-script@v6.1.0
        env:
